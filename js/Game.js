@@ -103,19 +103,11 @@ class Game {
             overlay.className = 'win';
             h1.textContent = 'Congratulations you are a Phrase Hunter!';
             resetOverlay();
-            // overlay.className = 'win';
-            // h1.textContent = 'Congratulations you win!';
+
         } else if (!this.checkForWin() && this.missed === 5) {
             overlay.className = 'lose';
             h1.textContent = 'You have lost :( Please try again';
             resetOverlay();
-        }
-        
-        // overlay.style.display = '';
-        
-
-        
- 
-    
+        }    
     }
 }
