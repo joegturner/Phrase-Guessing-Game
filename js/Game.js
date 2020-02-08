@@ -2,9 +2,9 @@ class Game {
     constructor () {
         this.missed = 0;
         this.phrases = [
-            // new Phrase('Hey chagiya babe'),
-            // new Phrase('Avocado toast for my babe'),
-            // new Phrase('Rion is cute'),
+            new Phrase('Do or Do Not'),
+            new Phrase('You are Awesome'),
+            new Phrase('Avengers Assemble'),
             new Phrase('I love New York')
         ];
         this.activePhrase = null;
@@ -85,23 +85,37 @@ class Game {
      * ends game based on win or loss
      */
     gameOver() {
+        
+        function resetOverlay() {
+            setTimeout(function() {
+                overlay.style.display = '';
+                while (oldPhrase.hasChildNodes()) {
+                    oldPhrase.removeChild(oldPhrase.lastElementChild);
+                }
+            }, 1500);
+        }
+        
         const overlay = document.getElementById('overlay');
         const h1 = document.getElementById('game-over-message');
-        
+        const oldPhrase = document.querySelector('ul');
+
         if (this.checkForWin()) {
             overlay.className = 'win';
-            h1.textContent = 'Congratulations you win!';
+            h1.textContent = 'Congratulations you are a Phrase Hunter!';
+            resetOverlay();
+            // overlay.className = 'win';
+            // h1.textContent = 'Congratulations you win!';
         } else if (!this.checkForWin() && this.missed === 5) {
             overlay.className = 'lose';
-            h1.textContent = 'You lose!';
+            h1.textContent = 'You have lost :( Please try again';
+            resetOverlay();
         }
-        overlay.style.display = '';
         
-        const oldPhrase = document.querySelector('ul');
+        // overlay.style.display = '';
         
-        while (oldPhrase.hasChildNodes()) {
-            oldPhrase.removeChild(oldPhrase.lastElementChild);
-        }
+
+        
+ 
     
     }
 }
