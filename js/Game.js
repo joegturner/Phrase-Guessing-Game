@@ -5,7 +5,8 @@ class Game {
             new Phrase('Do or Do Not'),
             new Phrase('You are Awesome'),
             new Phrase('Avengers Assemble'),
-            new Phrase('I love New York')
+            new Phrase('I love New York'),
+            new Phrase('Pedro for president')
         ];
         this.activePhrase = null;
     }
@@ -92,7 +93,7 @@ class Game {
                 while (oldPhrase.hasChildNodes()) {
                     oldPhrase.removeChild(oldPhrase.lastElementChild);
                 }
-            }, 1500);
+            }, 500);
         }
         
         const overlay = document.getElementById('overlay');
