@@ -6,7 +6,12 @@ class Game {
             new Phrase('You are Awesome'),
             new Phrase('Avengers Assemble'),
             new Phrase('I love New York'),
-            new Phrase('Pedro for president')
+            new Phrase('Pedro for president'),
+            new Phrase('Mi casa es su casa'),
+            new Phrase('Wash your hands'),
+            new Phrase('Do what you love'),
+            new Phrase('Love what you do'),
+            new Phrase('Who let the dogs out')
         ];
         this.activePhrase = null;
     }
