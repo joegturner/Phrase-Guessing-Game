@@ -206,9 +206,6 @@ button {
 
 /* Media Queries: Tablet Portrait */
 @media screen and (max-width: 768px) {
-  body {
-    background-color: brown;
-  }
   :root {
     --font-size-large: 50px;
     --font-size-medium: 16px;
@@ -217,9 +214,6 @@ button {
 
 /* Media Queries: Mobile Portrait */
 @media screen and (max-width: 425px) {
-  body {
-    background-color: rgb(12, 235, 235);
-  }
   :root {
     --font-size-large: 35px;
     --font-size-medium: 15px;
@@ -251,9 +245,6 @@ button {
 
 /* Media Queries: Small Mobile Portrait */
 @media screen and (max-width: 320px) {
-  body {
-    background-color: rgb(38, 235, 12);
-  }
   :root {
     --font-size-large: 30px;
     --font-size-medium: 10px;
